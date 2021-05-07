@@ -1,0 +1,4 @@
+include ':Grid-Module'
+include ':app'
+include ':Library'
+rootProject.name = "Grid"
