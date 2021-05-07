@@ -1,5 +1,8 @@
 # Grid
-Custom library to get the network connectivity status of your app
+An easy to use library to check the network connectivity status of your app
+
+![Release](https://jitpack.io/v/PranavRaj12/Grid.svg)
+
 
 ### Gradle
 
@@ -18,7 +21,7 @@ and
 
 ```
 dependencies {
-	        implementation 'com.github.PranavRaj12:Grid:0.1.0'
+	        implementation 'com.github.PranavRaj12:Grid:0.1.1'
 	}
 ```
 
@@ -38,7 +41,7 @@ Flight mode ON 	:airplane:
 
 
 
-### Usage
+### Usage (Kotlin)
 
 ```
   val status = findViewById<MaterialTextView>(R.id.statusText) as MaterialTextView
@@ -49,6 +52,19 @@ Flight mode ON 	:airplane:
         }
         else{
             status.setText("Connected.")
+        }
+```
+
+### Usage (Java)
+
+```
+  MaterialTextView  status= (MaterialTextView) findViewById(R.id.statusText);
+        ConnectionStatus connectionStatus = new ConnectionStatus();
+        if(!connectionStatus.isConnected(this)){
+            status.setText("Network Error!");
+        }
+        else {
+            status.setText("Connected.");
         }
 ```
 
