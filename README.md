@@ -4,6 +4,16 @@ An easy to use library to check the network connectivity status of your app
 ![Release](https://jitpack.io/v/PranavRaj12/Grid.svg)
 
 
+### AndroidManifest.xml
+
+Add these permissions in the manifest file
+
+```
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.INTERNET"/>
+```
+
+
 ### Gradle
 
 Add to project level _build.gradle_
@@ -24,6 +34,7 @@ dependencies {
 	        implementation 'com.github.PranavRaj12:Grid:0.1.1'
 	}
 ```
+
 
 
 ### Screenshots:
